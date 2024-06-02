@@ -46,3 +46,36 @@ func kenaRazia(date int, data []Kendaraan) []map[string]interface{} {
 
 	return pelanggaran
 }
+
+func main() {
+	// Contoh pemanggilan fungsi
+	date := 27
+	data := []Kendaraan{
+		{
+			Name: "Denver",
+			Plat: "B 2791 KDS",
+			Type: "Mobil",
+			Rute: []string{"TB Simatupang", "Panglima Polim", "Depok", "Senen Raya"},
+		},
+		{
+			Name: "Toni",
+			Plat: "B 1212 JBB",
+			Type: "Mobil",
+			Rute: []string{"Pintu Besar Selatan", "Panglima Polim", "Depok", "Senen Raya", "Kemang"},
+		},
+		{
+			Name: "Stark",
+			Plat: "B 444 XSX",
+			Type: "Motor",
+			Rute: []string{"Pondok Indah", "Depok", "Senen Raya", "Kemang"},
+		},
+		{
+			Name: "Anna",
+			Plat: "B 678 DD",
+			Type: "Mobil",
+			Rute: []string{"Fatmawati", "Panglima Polim", "Depok", "Senen Raya", "Kemang", "Gajah Mada"},
+		},
+	}
+
+	fmt.Println(kenaRazia(date, data))
+}
